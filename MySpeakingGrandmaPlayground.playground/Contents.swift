@@ -5,24 +5,32 @@ import UIKit
 func speakingToGrandma(greeting: String) -> String {
     
     let allCapsGreeting = greeting.uppercaseString
+    print(allCapsGreeting)
     let allLowercaseGreeting = greeting.lowercaseString
+    print(allLowercaseGreeting)
     
-    let returnForAllCaps = "NO, NOT SINCE 1938!"
-    let returnForAllLowercase = "WHAT'S THAT? SPEAK UP, DEAR!"
+    let forAllCaps = "NO, NOT SINCE 1938!"
+    let forAllLowercase = "WHAT'S THAT? SPEAK UP, DEAR!"
+    
     let wisper = (allLowercaseGreeting == greeting)
     let shouting = (allCapsGreeting == greeting)
     
     
     if shouting {
-        return returnForAllCaps
-        
-    } else if wisper {
-        return returnForAllLowercase
+        print(shouting)
+        print(forAllCaps)
+        return forAllCaps
+    }
+    if wisper {
+        print(wisper)
+        print(forAllLowercase)
+        return forAllLowercase
         
     } else {
-        return "Greeting with mixed letters"
+        return "Greeting with mixed case letters"
     }
 }
+
 
 speakingToGrandma("hi, grandma!")
 speakingToGrandma("HI, GRANDMA!")
